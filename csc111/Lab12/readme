@@ -1,0 +1,31 @@
+/*Lab 12
+ *Programmer: Andrew S. and Jessica H.
+ *Course: S17 CSC111
+ *Professor: Dr. Lee
+ */
+
+Program Description:
+   XOR: Takes a file stored in msg file and encrypts it using a simple exclusive or encryption and a character key. Can decrypt the file by running it through the encryptor a second time.
+   Viewmemory: Prints the memory locations of the main function and the address variable from the program. Then allows the user to enter a location in memory and the amount of bytes to display and shows wat is stored in those locations to the user.
+
+File included:
+   Source Code: xor.c
+                viewmemory.c
+   Additional: makefile
+               msg
+
+Testing Enviroment: Sloop
+                    linux
+
+How to Compile:
+   1.makefile: type "make xor"
+               type "make viewmemory"
+   2.gcc: type "gcc -o xor xor.c"
+          type "gcc -o viewmemory viewmemory.c"
+
+How to run: type "./xor <msg >newmsg" to take what is in msg file, run it through the encryptor, and store the result in newmsg file.
+            type "./viewmemory" to run the viewmemory program
+
+Known Bugs: n/a
+
+Notes: The encryption program is able to decrypt the message by running it a second time due to the nature of the exclusive or operation. When run the first time, the bits that are different will be changed while those that are the same will remain the same. Thus when it is run a second time, the ones that were changed the first time, are now the same bits as the key, and will be changed back the second time the encryption is run.

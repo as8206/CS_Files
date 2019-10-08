@@ -1,0 +1,51 @@
+/* Project 1: Technical Report
+   Programmer: Andrew Stake
+   Course: CS2 CSC111
+   Professor: Dr. Lee
+*/
+
+Project Description: The program will request and then read a DNA sequence of 25 characters or less from the user and store it temporarily into an array, then into a linked list. This list will be passed to countBase.c which will count the number of the 4 different bases as well as report any invalid bases. Each node of the linked list that is counted will be removed after it is counted. The amount of each base contained in the sequence will then be output to the user.
+
+Algorithm: 
+   testdna.c: 1.Create structure to hold create linked list nodes for DNA bases
+                   2. Read in sequence from the user
+                      2.1 Contain within a while loop that checks to see if a Boolean flag testing the length of the sequence is true.
+                         2.1a Request data entry from the user
+                         2.1b Read in user data and store in string
+                         2.1c Pass string to function to check length.
+                         2.1d If function confirms string is of valid length, set flag to true
+                   3. Transfer sequence from array to linked list
+                      3.1 Contain in a for loop that runs through array one character at a time
+                         3.1a pass each character to function that creates a new node and stores that character in it.
+                   4. Print out the sequence entered by the user using the linked list.
+                   5. Pass the pointer to the first node of the linked list to the countBase function
+
+   countBase.c: 1. Create variables to hold the number of each base.
+                2. Create loop to run through linked list passed to function
+                   2.1 Evaluate character stored in current node, increment variable accordingly, or report invalid base.
+                   2.2 Advance to next node in the list
+                   2.3 Remove and free memory space of previous node
+                3. Print the results of counting each base to the user
+
+Analysis: 
+   Sample Input: ACGG
+   Program Trace: 1. Program asks for sequence and user enters "ACGG"
+                  2. Function checking length confirms "ACGG" is of correct length and the program continues.
+                  3. "ACGG" string is separated and stored in a linked list.
+                     3.1 "A" is stored in the first node
+                     3.2 "C" is stored in the second node
+                     3.3 "G" is stored in the third node
+                     3.4 "G" is stored in the fourth node
+                  4. Loop prints out ACGG one character at a time, showing the user exactly what they entered
+                  5. Pointer to the "A" node is passed to the countBase.c function
+                  6. The "A" node is evaluated and the variable containing the number of A's is incremented.
+                     6.1 The pointer is advanced to the next node and the node containing "A" is freed from memory.
+                  7. The "C" node is evaluated and the variable containing the number of C's is incremented.
+                     7.1 The pointer is advanced to the next node and the node containing "C" is freed from memory.
+                  8. The "G" node is evaluated and the variable containing the number of G's is incremented.
+                     8.1 The pointer is advanced to the next node and the node containing the first "G" is freed from memory.
+                  9. The "G" node is evaluated and the variable containing the number of G's is incremented a second time.
+                     9.1 The pointer is advanced to the next node and the node containing the second "G" is freed from memory.
+                  10. The results of the count are printed
+
+Conclusion: The program algorithm will correctly evaluate the simple input of "ACGG". Splitting the string (character array) into individual characters is easy and it is equally simple to store these in a simple structure. Using pointers allows the easy transfer of date between functions. Freeing the memory space as the nodes are evaluated helps to conserve memory.

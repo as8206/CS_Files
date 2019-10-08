@@ -1,0 +1,3 @@
+Camera will always center on the player
+Level design will have enough space around the edge rooms to prevent camera from leaving rendered screen space
+Fades to black and then back to view when going down a level in the dungeon

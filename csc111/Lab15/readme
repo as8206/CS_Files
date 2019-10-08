@@ -1,0 +1,24 @@
+/* Lab 15: readme
+   Programmer: Andrew S, Mike S, Spencer H.
+   Class: CS2
+   Professor: Dr. Lee
+   File Created: April 20, 2017
+   File Updated: April 20, 2017
+*/
+
+Program Description: 
+   1. canopen.c: This program takes a comment line input of a file, and checks to see if said file can be opened.
+   2. fcopy.c: This program takes two different comments line inputs. The first is a source to copy from, and the second is the file to be created. The program then makes sure both files can be openned, then copies the first into the second.
+
+Testing Enviroment: Sloop
+                    linux
+
+How to Compile:
+   w/ makefile: type "make"
+   w/ gcc: type "gcc -o canopen canopen.c"
+           type "gcc -o fcopy fcopy.c"
+
+How to Run: type "./canopen file"
+            type "./fcopy f1 f2"
+
+Known Bugs: n/a

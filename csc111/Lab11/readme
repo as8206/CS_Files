@@ -1,0 +1,40 @@
+/*
+ * Lab 11
+ * Programmer: Andrew S and Gabe W
+ * Course: s17 CSC111
+ * Professer: Dr. Lee
+ */
+
+Project information: Various different example stack programs.
+   1. Version that uses a simple array to form the stack
+   2. Version that uses a linked list to form the stack
+   3. Version that uses an Abstract Data type to form the stack
+   4. Version that uses an Abstract Data type with a dynamic array to form the stack
+   5. Version that uses and Abstract Data type with a linked list to form the stack
+
+Files included:
+   Source code: stack1.c
+                stack2.c
+                stackADT.c
+                stackADT2.c
+                stackADT3.c
+                driver.c
+                stackclient.c
+                stackclinet2.c
+                stack.h
+                stackADT.h
+                stackADT2.h
+   Addtional: makefile
+
+Testing enviroment: Sloop
+                    linux
+
+How to compile: for version 1, type "make stack1"
+                for version 2, type "make stack2"
+                for version 3, type "make stackADT"
+                for version 4, type "make stackADT2"
+                for version 5, type "make stackADT3"
+
+How to run: type "./run"
+
+Known bugs: n/a

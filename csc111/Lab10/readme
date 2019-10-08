@@ -1,0 +1,35 @@
+/*
+ * Lab 10: Advanced Function Pointers
+ * Programmer: Andrew S and Shane A
+ * Course: CS2
+ * Professor: Dr. Lee
+ */
+
+Program Description: Includes four programs. 
+   p455n15.c is a program that will use a pointer to a function to loop a call to a function to determine when an equation returns true. 
+   p455n16.c is a program that will request 2 numbers, the second one larger than the first. It will then calculate the sum of 2x+3 (x being the input) from the initial input to the second input.
+   qsort is a program that takes 10 integers from the user and sorts them using the quick sort algorithm. This version uses arrays.
+   qsort2 is a program that also takes 10 intergers from the user and sorts them using the quick sort algorith. However, this version uses pointers.
+
+Files included:
+   Source code: p455n15.c
+                p455n16.c
+                qsort.c
+                qsort2.c
+   Additional: makefile
+
+Testing Enviroment: Sloop
+                    linux
+
+How to compile: 1. makefile: type "make" in program folder
+                2. gcc: type "gcc -o p155n15 p155n15.c"
+                        type "gcc -o p155n16 p155n16.c"
+                        type "gcc -o qsort qsort.c"
+                        type "gcc -o qsort2 qsort2.c"
+
+How to run: type "./p155n15" to run first program
+            type "./p155n16" to run second program
+            type "./qsort" to run thrid program
+            type "./qsort2" to run fourth program
+
+Known Bugs: n/a

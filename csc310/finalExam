@@ -1,0 +1,19 @@
+Final Exam:
+
+Proofs
+Use the master theorem
+Backwards/Forwards substitution
+Formal definitions of Big O, theta, and omega
+Know all the algorithms
+	there will be atleast one algorithm from each of the techniques
+Know characteristics of each of the techniques
+	know what general standard the technique uses
+	know what the differences between them are (ie divide and conquer vs. transform and conquer)
+Basic definitions
+	(ie what is a pivot, minimal spanning tree, etc)
+
+Extras (chapter 11):
+decision trees and trivial bounds
+definitions for np and p
+tractable and intractable problems
+

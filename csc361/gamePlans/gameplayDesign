@@ -1,0 +1,22 @@
+Players will move through dungeons trying to get the highest score they can before they die.
+Dungeons will have multiple levels and a final boss at the end.
+Each level the player progresses through gets harder and harder.
+Finishing a dungeon and moving on to the next increases difficulty more significantly than a level change within the same dungeon.
+When the player dies they lose all equipment and score.
+
+Pots and chests can be broken/opened to gain gold.
+These will also contain loot such as weapons or armor.
+Can rarely contain health increases
+
+Enemies will be spawned in the rooms when they are created.
+Once a door to the room is opened, the room is revealed and the enemies will begin to attack.
+Killed enemies will occasionally drop power-ups. (Double score, healing, etc)
+
+Score is gained from picking up gold as well as killing enemies.
+If a dungeon is "cleared" a large score bonus is awarded.
+
+To clear the dungeon the player must go down through all levels.
+After they advance past the final level of the dungeon they will reach the boss level.
+The boss level consists of only the boss enemy encounter.
+
+After the boss is defeated, the player leaves the dungeon and can enter the next one.

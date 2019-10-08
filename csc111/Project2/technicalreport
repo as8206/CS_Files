@@ -1,0 +1,380 @@
+/* Project 2: technicalreport
+   Programmer: Andrew Stake
+   Class: CS2
+   Professor: Dr. Lee
+   File Created: May 2, 2017
+   File Updated: May 4, 2017
+*/
+
+Project description: This program is designed to utililize the stackADT that is found in our book and queueADT that we must make ourselves. Both ADTs will utilize linked lists to hold the data and dynamically allocated memory. The program will create 2 of each of these types, inStack, outStack, inQueue, and outQueue. The program will take in data from the test.dat file in the form of lines that say either "add #" or "delete". If the line is "add #", the program will push said number to both inStack and inQueue. If the line is "delete", two things will happen: 1. inStack will be popped and the returned data will be stored in outQueue and 2. inQueue will be popped and the returned data will be stored in outStack. This will continue reading line by line in test.dat until there are no more lines to read in. After this, the program will output the resulting values of outStack and outQueue. Both outStack and outQueue respectively will be popped and have the returning value printed to the console until they are empty.
+   Function descriptions:
+      createStack() and createQueue: allocates space for the new Stack or Queue, then intializes their variables
+      destroyStack() and destroyQueue(): empties the Stack or Queue and then frees its memory space.
+      make_emptyStack() and make_emptyQueue(): Using a while loop, pops the Stack or Queue until it is empty.
+      is_emptyStack() and is_emptyQueue(): checks to see if the pointer is NULL, if it is, returns true indicating the Stack or Queue is empty
+      is_fullStack and is_fullQueue: returns faslse as the memory is dynamically allocated
+      pushStack(): creates a new node to store the new information. This node isplace on top of the stack, by setting the top pointer to this new node, and the next value of the new node to the node just below it.
+      pushQueue(): creates a new node to store the new information. This node is put at the back of the Queue by setting the back pointer to this new node, and having the next to last node now point to this new node.
+      popStack(): creates a temporary node and stores the iformation from the top node into it. The top pointer is then set to point to the next lowest node, and the data inside the temproary node is returned.
+      popQueue(): creates a temporary node and stores the information from the front node into it. The front pointer is then set to the next node in the Queue, and the data inside the temporary node is returned.
+
+Algorithm: declare num = 0 (integer)
+           declare command (string variable)
+           declare line (string variable)
+           declare fp (file pointer)
+           if (comment line input isn't 2)
+              print error message
+              exit program
+           endif
+           fp = open given file
+           line = read in one line of file
+           loop (until line equals NULL, indicating EOF)
+              command = tokenize line by " "
+              if (command holds "add")
+                 num = convert to int: tokenize line again
+                 push num to inQueue
+                 push num to inStack
+              end if
+              else if (command hold "delete")
+                 num = pop from inQueue
+                 push num to outStack
+                 num = pop form inStack
+                 push num to outQueue
+              end else if
+              else
+                 print error message
+              end else
+              line = read in one line of file
+           end loop
+           print "outStack: "
+           loop (until outStack is empty)
+              num = pop from outStack
+              print num
+           end loop
+           print "\noutQueue: "
+           loop (until outQueue is empty)
+              num = pop from outQueue
+              print num
+           end loop
+           print new line
+           
+Analysis:
+   Input:
+      test.dat: add 1
+                add 2
+                delete
+                add 3
+                add 4
+                delete
+                delete
+                delete
+      comment line: ./sqjuggler test.dat
+   
+   Procedure:  declare num = 0 (integer)
+               declare command (string variable)
+               declare line (string variable)
+               declare fp (file pointer)
+               
+               if (argc !=2)
+                  -false, if not run
+               endif
+               
+               fp = fopen(argv[1], "r")
+                  -fp now points to "test.dat"
+                  
+               line = read in one line of file
+                  -line = "add 1"
+                  
+               loop (until line equals NULL, indicating EOF)
+                  -true, line = "add 1"
+                  command = tokenize line by " "
+                     -command = "add"
+                  if (command holds "add")
+                     -true
+                     num = convert to int: tokenize line again
+                        -num = 1
+                     push num to inQueue
+                        -inQueue holds: 1
+                     push num to inStack
+                        -inStack holds: 1
+                  else if (command hold "delete")
+                     -false, if not run
+                  end else if
+                  else
+                     -not run, first if was triggered
+                  end else
+                  line = read in one line of file
+                     -line = "add 2"
+                     
+               loop check
+                  -true, line = "add 2"
+                  command = tokenize line by " "
+                     -command = "add"
+                  if (command holds "add")
+                     -true
+                     num = convert to int: tokenize line again
+                        -num = 2
+                     push num to inQueue
+                        -inQueue holds: 1 2
+                     push num to inStack
+                        -inStack holds: 2 1
+                  else if (command hold "delete")
+                     -false, if not run
+                  end else if
+                  else
+                     -not run, first if was triggered
+                  end else
+                  line = read in one line of file
+                     -line = "delete"
+                     
+               loop check
+                  -true, line = "delete"
+                  command = tokenize line by " "
+                     -command = "delete"
+                  if (command holds "add")
+                     -false, if not run
+                  else if (command holds "delete"
+                     -true
+                     num = pop from inQueue
+                        -num = 1
+                        -inQueue holds: 2
+                     push num to outStack
+                        -outStack holds: 1
+                     num = pop from inStack
+                        -num = 2
+                        -inStack holds: 1
+                     push num to outQueue
+                        -outQueue holds: 2
+                  end else if
+                  else
+                     -not run, else if was triggered
+                  end else
+                  line = read in one line of file
+                     -line = "add 3"
+                     
+               loop check
+                  -true, line = "add 3"
+                  command = tokenize line by " "
+                     -command = "add"
+                  if (command holds "add")
+                     -true
+                     num = convert to int: tokenize line again
+                        -num = 3
+                     push num to inQueue
+                        -inQueue holds: 2 3
+                     push num to inStack
+                        -inStack holds: 3 1
+                  else if (command hold "delete")
+                     -false, if not run
+                  end else if
+                  else
+                     -not run, first if was triggered
+                  end else
+                  line = read in one line of file
+                     -line = "add 4"
+                     
+               loop check
+                  -true, line = "add 4"
+                  command = tokenize line by " "
+                     -command = "add"
+                  if (command holds "add")
+                     -true
+                     num = convert to int: tokenize line again
+                        -num = 4
+                     push num to inQueue
+                        -inQueue holds: 2 3 4
+                     push num to inStack
+                        -inStack holds: 4 3 1
+                  else if (command hold "delete")
+                     -false, if not run
+                  end else if
+                  else
+                     -not run, first if was triggered
+                  end else
+                  line = read in one line of file
+                     -line = "delete"
+                  
+               loop check
+                  -true, line = "delete"
+                  command = tokenize line by " "
+                     -command = "delete"
+                  if (command holds "add")
+                     -false, if not run
+                  else if (command holds "delete"
+                     -true
+                     num = pop from inQueue
+                        -num = 2
+                        -inQueue holds: 3 4
+                     push num to outStack
+                        -outStack holds: 2 1
+                     num = pop from inStack
+                        -num = 4
+                        -inStack holds: 3 1
+                     push num to outQueue
+                        -outQueue holds: 2 4
+                  end else if
+                  else
+                     -not run, else if was triggered
+                  end else
+                  line = read in one line of file
+                     -line = "delete"
+               
+               loop check
+                  -true, line = "delete"
+                  command = tokenize line by " "
+                     -command = "delete"
+                  if (command holds "add")
+                     -false, if not run
+                  else if (command holds "delete"
+                     -true
+                     num = pop from inQueue
+                        -num = 3
+                        -inQueue holds: 4
+                     push num to outStack
+                        -outStack holds: 4 2 1
+                     num = pop from inStack
+                        -num = 3
+                        -inStack holds: 1
+                     push num to outQueue
+                        -outQueue holds: 2 4 3
+                  end else if
+                  else
+                     -not run, else if was triggered
+                  end else
+                  line = read in one line of file
+                     -line = "delete"
+                     
+               loop check
+                  -true, line = "delete"
+                  command = tokenize line by " "
+                     -command = "delete"
+                  if (command holds "add")
+                     -false, if not run
+                  else if (command holds "delete"
+                     -true
+                     num = pop from inQueue
+                        -num = 4
+                        -inQueue is empty
+                     push num to outStack
+                        -outStack holds: 3 4 2 1
+                     num = pop from inStack
+                        -num = 1
+                        -inStack is empty
+                     push num to outQueue
+                        -outQueue holds: 1 2 4 3
+                  end else if
+                  else
+                     -not run, else if was triggered
+                  end else
+                  line = read in one line of file
+                     -line = NULL
+                     
+               loop check
+                  -false, line equals NULL
+               end loop
+               
+               print "outStack: "
+                  -"outStack: " is printed to the screen
+               loop (until outStack is empty)
+                  -true, outStack holds: 3 4 2 1
+                  num = pop from outStack
+                     -num = 3
+                     -outStack holds: 4 2 1
+                  print num
+                     -"3 " is printed to the screen
+                     -current output: "outStack: 3 "
+               
+               loop check
+                  -true, outStack holds: 4 2 1
+                  num = pop from outStack
+                     -num = 4
+                     -outStack holds: 2 1
+                  print num
+                     -"4 " is printed to the screen
+                     -current output: "outStack: 3 4 "
+               
+               loop check
+                  -true, outStack holds: 2 1
+                  num = pop from outStack
+                     -num = 2
+                     -outStack holds: 1
+                  print num
+                     -"2 " is printed to the screen
+                     -current output: "outStack: 3 4 2 "
+                  
+               loop check
+                  -true, outStack holds: 1
+                  num = pop from outStack
+                     -num = 1
+                     -outStack is empty
+                  print num
+                     -"1 " is printed to the screen
+                     -current output: "outStack: 3 4 2 1 "
+                     
+               loop check
+                  -false, outStack is empty
+               end loop
+               
+               print "\noutQueue: "
+                  -on a new line "outQueue: " is printed to the screen
+                  -current output: "outStack: 3 4 2 1
+                                    outQueue: "
+               loop (until outQueue is empty)
+                  -true, outQueue holds : 1 2 4 3
+                  num = pop from outQueue
+                     -num = 1
+                     -outQueue holds: 2 4 3
+                  print num
+                     -"1 " is printed to the screen
+                     -current output: "outStack: 3 4 2 1
+                                       outQueue: 1 "
+                  
+               loop check
+                  -true, outQueue holds: 2 4 3
+                  num = pop from outQueue
+                     -num = 2
+                     -outQueue holds: 4 3
+                  print num
+                     -"2 " is printed to the screen
+                     -current output: "outStack: 3 4 2 1
+                                       outQueue: 1 2 "
+                                       
+               loop check
+                  -true, outQueue holds: 4 3
+                  num = pop from outQueue
+                     -num = 4
+                     -outQueue holds: 3
+                  print num
+                     -"4 " is printed to the screen
+                     -current output: "outStack: 3 4 2 1
+                                       outQueue: 1 2 4 "
+                                       
+               loop check
+                  -true, outQueue holds: 3
+                  num = pop from outQueue
+                     -num = 3
+                     -outQueue is empty
+                  print num
+                     -"3 " is printed to the screen
+                     -current output: "outStack: 3 4 2 1
+                                       outQueue: 1 2 4 3 "
+               
+               loop check
+                  -false, outQueue is empty
+               end loop
+               
+               print new line
+                  -"\n" is printed, moving down one line
+                  -"current output: "outStack: 3 4 2 1
+                                     outQueue: 1 2 4 3
+                                     "
+               
+   Final output: "outStack: 3 4 2 1
+                  outQueue: 1 2 4 3
+                  "
+                  
+Conclusion: The algorithm worked correctly. The results from running through how my program would do it, are the same as the results I got while going through the example input by hand. The program when used in conjuction with the Stack ADT and Queue ADT types effectively juggles the numbers between Stacks and Queues in the correct way each type should behave.            
+               
+Sources: stackADT.c and stackADT.h were taken from pages 496-497 and 500-501 in C Programming, A Modern Approach by K. N. King
+         queueADT.c and queueADT.h were created by modifiying the source code in previous citation
+

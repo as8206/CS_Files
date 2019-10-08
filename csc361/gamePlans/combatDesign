@@ -1,0 +1,14 @@
+Enemies can either be melee or ranged based, their movement is determined by type.
+
+Melee enemies will always try to move towards the player.
+If they come into contact with the player, they will deal damage and play an animation.
+All melee damage(done by and against player) will cause small knockback
+
+Ranged enemies will move to a select distance and try to maintain it.
+At this range they will strafe around short distances in random directions to try to dodge attacks.
+They will always fire if they are within range of their attacks.
+
+Players will attack with spells
+They can have 3 spells active at one time.
+Mouse 1 and 2 will be bound to the players standard spells.
+Spacebar will be used for an "ultimate" spell.

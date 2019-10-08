@@ -1,0 +1,22 @@
+/* Project 1: Readme
+   Programmer: Andrew Stake
+   Course: CS2 CSC111
+   Professor: Dr. Lee
+*/
+
+Program Description: The program reads a DNA sequence from the keyboard, then counts the number of bases in the sequence. The amount of each base is then output to the console.
+
+File Included: 
+   Source code: testdna.c
+                testdna.h
+                countBase.c
+   Additional:   makefile
+
+Testing Enviroment: Sloop
+                    Linux
+
+How to Compile: 1. make testdna
+
+How to Run: ./testdna
+
+Know Bugs: Occasionally after a sequence that is too long is entered, and then corrected, there will be a "Stack Smashing Detected" error reported. However the output is still produced, printed, and correct.

@@ -1,0 +1,21 @@
+/* Lab 17: readme
+   Programmer: Andrew Stake
+   Class: CS2
+   Professor: Dr. Lee
+   File Created: May 4, 2017
+   FIle Updated: May 4, 2017
+*/
+
+Project description: This is a program that will uses a set algorithm to test and find all of the answers to the 12 coin question. Each coin has a value 1 - 12 and must be put into two groups, one of 4 and one of 8 that must have 2 prime numbers. The summation of the group of 4 times 2 must be equal to the summation of the group of 8.
+
+Testing enviroment: linux
+                    sloop
+Files included:
+   Source code: lab17.c
+   Additional: readme
+
+How to compile: type "make lab17"
+
+How to run: type "/lab17"
+
+Known bugs: Though I think my algorithm will work to print the results, I was getting a weird error I couldn't solve within the time. 

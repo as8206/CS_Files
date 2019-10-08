@@ -1,0 +1,30 @@
+/* Lab 14: readme
+   Programmers: Andrew S, Mike S, Spencer H
+   Class: CS2
+   Professor: Dr. Lee
+   File Created: April 20, 2017
+   File Updated: April 20, 2017
+*/
+
+Program description: As part of the new educational reform program, the CS department has decided to engage in censorship of school texts. In this problem, you must help the department by writing a program which eliminates from an input text string all occurrences of strings from a set of words to be filtered. More formally, a word w can be removed from another string s if w is a substring of s (i.e., the characters of w appear consecutively in s). Given a text string s and a set T of words to be filtered, return the length of the shortest possible string that can result from iteratively removing words in T from s. Each word in T may be removed from s an unlimited number of times.
+
+Files included:
+   Source code: lab14.c
+                lab14b.c
+                lab14.h
+   Additional: makefile
+               readme
+
+Testing enviroment: linux
+                    sloop
+
+How to compile:
+   1. Makefile: type "make lab14"
+   2. gcc: type "gcc -g -Wall   -c -o lab14.o lab14.c
+                 gcc -g -Wall   -c -o lab14b.o lab14b.c
+                 gcc -g -Wall lab14.o lab14b.o -o lab14"
+
+How to run: type "./lab14 file"
+
+Known Bugs: No bugs, but program is not efficient.
+

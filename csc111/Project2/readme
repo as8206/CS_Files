@@ -1,0 +1,42 @@
+/* Project 2: readme
+   Programmer: Andrew Stake
+   Class: CS2
+   Professor: Dr. Lee
+   File Created: April 2, 2017
+   File Updated: April 2, 2017
+*/
+
+Project Description: This project is to write a program to test the functionality of stackADT (textbook p500-p501) and
+queueADT that implemented using linked lists. You will read data from the test.dat file.
+When you read add number, the number should be inserted to both stack (push) and queue
+(enqueue) named inStack and inQueue, respectively.
+When you read delete, data should be deleted from both inStack (pop) and inQueue (dequeue).
+Data popped from inStack should be enqueued in outQueue. Similarly, data dequeued from
+inQueue should be pushed in outStack.
+
+File included:
+   Source code: sqjuggler.c
+                stackADT.c
+                queueADT.c
+                stackADT.h
+                queueADT.h
+   Additional: makefile
+               readme
+               technical_report
+               
+Testing enviroment: linux
+                    sloop
+                    
+How to Compile:
+   1. Makefile: type "make sqjuggler"
+    -or-
+   2. gcc: type "gcc -g -Wall   -c -o sqjuggler.o sqjuggler.c
+                 gcc -g -Wall   -c -o stackADT.o stackADT.c
+                 gcc -g -Wall   -c -o queueADT.o queueADT.c
+                 gcc -g -Wall sqjuggler.o stackADT.o queueADT.o -o sqjuggler"
+
+How to run: type "./sqjuggler 'file name'"
+
+Known Bugs: n/a
+
+

@@ -1,0 +1,5 @@
+notes:
+
+excvp(arguments[0], arguments);    execute call to input command into linux shell
+
+for !! and !# else if statements in child, create new function with duplicate logic(of first the command line evaluation and then child if/else logic). Therefore a whole command line string can be passed to this function and allow it to be treated as if it were just typed.

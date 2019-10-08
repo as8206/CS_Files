@@ -1,0 +1,25 @@
+/* Lab 16: readme
+   Programmer: Andrew S and Mike S
+   Class: CS2
+   Professor: Dr. Lee
+   File Created: April 25, 2017
+   File Updated: April 25, 2017
+*/
+
+Program Description: This program creates a list structure to hold a list of cities and their distance in miles from New York City. After creation, an array is then filled with various cities and distances. After receiving a city name from the user, the program uses a binary search funtion to attempt to located the city in the list. If the city is found, it prints the distance from NYC to the city. If the city is not found, the user is informed.
+
+Files Included: 
+   Source Code: airmile.c
+   Additional: makefile
+               readme
+
+Testing Enviroment: Sloop
+                    linux
+
+How to Compile:
+   1. Makefile: type "make"
+   2. GCC: type "gcc -o airmiles airmile.c
+
+How to Run: type "./airmiles"
+
+Known Bugs: n/a

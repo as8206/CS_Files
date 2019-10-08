@@ -1,0 +1,14 @@
+Hand-draw pixmap for many different blocks (ie. 20 by 20 meter "room")
+Randomly attach these blocks together to form a grid of different rooms up to a maximum size.
+Pad area around larger level with black (darkness) space to prevent camera from seeing through unrendered space
+This allows for psuedo-random level generation
+
+Standard components in rooms will be unbreakable-rocks, breakable-rocks, enemies, and gold(either breakable pots or chests etc)
+Some rooms will have more or less of these.
+Some rooms will be special rooms and have additional components.
+
+One random room will have a ladder placed below a breakable rock
+This is how the player will progress to the next level of the dungeon.
+
+Doors will seperate rooms and rooms will be dark until a door is opened.
+After open enemies will begin to attack

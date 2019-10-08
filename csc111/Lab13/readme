@@ -1,0 +1,22 @@
+/*CSC111 Computer Science 2
+  Lab 13: Pig Latin Strings
+  Programmers: Andrew S & Mike S
+  Professor: Dr. Lee
+*/
+
+Project: The purpose of this lab is to create a program that take input from a user and checks for a vowel at the beginning of the string. If there is a 
+vowel at the beginning, it will just add "-way" to the end and print it out.  If there is no vowel it will check for "Y" int the string as well. If there is a "y" it will add "-ay" at the end of the string. If there are no vowels at all it will return the string with "-way" at the end.
+
+Source Code: lab13.c, lab13.h
+   Additional: makefile
+
+How to Compile:
+1.)Type in "make lab13"
+ -or-
+1.)Type "gcc -o lab13 lab13.c
+
+How To Run:
+1.)Enter the same directory that you compiled in
+2.)Type "./lab13"
+
+Known Bugs: None
