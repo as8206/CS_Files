@@ -1,0 +1,14 @@
+Software Development Process
+______________________________________________________
+
+1. Team Productivity : (josh)
+	New Tests Passing - xBar and R chart w/control lines
+	Package Size - cu-sum chart 
+2. Quality of Software :
+	Defects per Package - u chart for nonconformities per unit w/ unknown sample size (mina)
+	Avg Cyclomatic Complexity - xBar and R chart w/control lines (andrew)
+3. Impact of changing environment : (mina)
+	
+4. Does complexity predict defects : (andrew)
+	Correlation tests between complexity and defects in each package
+
