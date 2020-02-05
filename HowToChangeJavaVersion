@@ -1,0 +1,7 @@
+In terminal: with sudo
+	update-alternatives --config java
+	update-alternatives --config javac
+In Eclipse: under Window -> Preferences -> Java
+	-> Installed JREs: then select correct java version
+	-> Compiler: change Compiler compliance level to appropriate java version
+	
