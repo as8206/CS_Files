@@ -1,0 +1,4 @@
+In SkinPicker, the crew is reset when the ScreenMap is rebuilt but the skin itself never is.
+Because the getCrewSkin checks for null before changing color, if this has already but initialized as a different player the skin is never reset.
+You can fix this by assigning the skin inside setCrew.
+The null check can still be left inside getCrewSkin as a backup just in case something goes wrong and skin is null 
